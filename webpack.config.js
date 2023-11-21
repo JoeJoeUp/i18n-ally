@@ -6,6 +6,7 @@ const path = require('path')
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin')
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin')
 const { createUnplugin } = require('unplugin')
+const { ContextReplacementPlugin } = require('webpack')
 
 /** @type {import('webpack').Configuration} */
 const config = {
@@ -34,7 +35,7 @@ const config = {
     '@microsoft/typescript-etw': '_',
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', 'mjs', '.js', '.json'],
     plugins: [
       new TsconfigPathsPlugin(),
     ],
@@ -50,6 +51,11 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto',
+      },
     ],
   },
   plugins: [
@@ -57,6 +63,10 @@ const config = {
     new FilterWarningsPlugin({
       exclude: /Critical dependency: the request of a dependency is an expression/,
     }),
+    new ContextReplacementPlugin(
+      /@vue\/compiler-sfc\/dist\/compiler-sfc\.esm-browser\.js$/,
+      '/path/to/your/replacement/module',
+    ),
     createUnplugin(() => {
       return {
         name: 'replace',
