@@ -63,4 +63,5 @@
     "html"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.extract.autoDetect": true,
 }
