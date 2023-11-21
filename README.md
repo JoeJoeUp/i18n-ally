@@ -1,108 +1,24 @@
-<p align="center">
-<img src="https://github.com/lokalise/i18n-ally/blob/main/screenshots/full-logo-new.png?raw=true" alt="logo" width="450"/>
-</p>
+![](https://github.com/lokalise/i18n-ally/raw/main/screenshots/full-logo-new.png?raw=true)
 
-<p align='center'>
-English | <a href="https://github.com/lokalise/i18n-ally/blob/main/README.zh-CN.md">简体中文</a>
-</p>
+## Features
 
-<p align="center">
-<a href="https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/lokalise.i18n-ally?color=blue&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/d/lokalise.i18n-ally?color=4bdbe3" alt="Visual Studio Marketplace Downloads" /></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/i/lokalise.i18n-ally?color=63ba83" alt="Visual Studio Marketplace Installs" /></a>
-<br/>
-<a href="https://github.com/lokalise/i18n-ally/wiki" target="__blank"><img alt="Wiki" src="https://img.shields.io/static/v1?label=docs&message=wiki&color=e3897b"></a>
-<a href="https://github.com/lokalise/i18n-ally" target="__blank"><img src="https://img.shields.io/github/last-commit/lokalise/i18n-ally?color=c977be" alt="GitHub last commit" /></a>
-<a href="https://github.com/lokalise/i18n-ally/issues" target="__blank"><img src="https://img.shields.io/github/issues/lokalise/i18n-ally?color=a38eed" alt="GitHub issues" /></a>
-<a href="https://github.com/lokalise/i18n-ally" target="__blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/lokalise/i18n-ally?style=social"></a>
-</p>
+### Inline Annotations
 
-<p align='center'>
-<b>v2.0</b> is released with new <a href='https://github.com/lokalise/i18n-ally/wiki/Editor-UI'>Editor UI</a> and <a href='https://github.com/lokalise/i18n-ally/wiki/Review-&-Collaboration-System'>Review System</a> 🎉
-</p>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-animated.gif?raw=true)### Hover and Direct Actions
 
-<p align='center'><i>
-<a href="https://github.com/lokalise/i18n-ally/wiki/Migration-v1.x">Migrate from v1.x</a>
-</i></p>
-<br>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/hover.png?raw=true)### Manage All Translations in One Place
 
-<p align="center">
-<a href='https://github.com/lokalise/i18n-ally/wiki/Supported-Frameworks' target="__blank">
-<img src="https://github.com/lokalise/i18n-ally/blob/screenshots/supported-frameworks.png?raw=true" alt="Supported Frameworks" width="550"/>
-</a>
-</p>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-sidebar.png?raw=true)### [Editor UI](https://github.com/lokalise/i18n-ally/wiki/Editor-UI) & [Review System](https://github.com/lokalise/i18n-ally/wiki/Review-&-Collaboration-System)
 
-<h3 align="center">Maintained by</h3>
-<p align="center">
-<a title="Lokalise: accelerate localization from code to delivery" href="https://lokalise.com/?utm_source=vscmarket&amp;utm_campaign=i18nally&amp;utm_medium=banner"><img src="https://github.com/lokalise/i18n-ally/raw/screenshots/lokalise-logo.png?raw=true" alt="Lokalise logo" width="275px"></a><br>
-<sup>Lokalise is the fastest growing language cloud technology made by developers, for developers.<br>
-As a collaborative productivity platform, it helps structure and automate the translation and localization process for any company in the world.<br>
-<a title="Lokalise: accelerate localization from code to delivery" href="https://lokalise.com/?utm_source=vscmarket&amp;utm_campaign=i18nally&amp;utm_medium=banner">Learn more</a></sup>
-</p>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-editor.png?raw=true)### Extract Translations from Code
 
-<br>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/extract.png?raw=true)### Report Missing Translations
 
-<br>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/problems.png?raw=true)### Machine Translation
 
-<h4 align="center">
-<a href="https://github.com/lokalise/i18n-ally/wiki">📖 Docs</a>
-&nbsp;|&nbsp;
-<a href="https://github.com/lokalise/i18n-ally/wiki/FAQ">💭 FAQ</a>
-&nbsp;|&nbsp;
-<a href="https://github.com/lokalise/i18n-ally/wiki/Configurations">⚙️ Configs</a>
-&nbsp;|&nbsp;
-<a href="https://github.com/lokalise/i18n-ally/wiki/Locale-Formats#supported-locale-formats">📜 Supported Formats</a>
-&nbsp;|&nbsp;
-<a href="https://github.com/lokalise/i18n-ally/wiki/Contribute">🧱 Contribute</a>
-</h4>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/quick-actions.png?raw=true)### Annotations for JSON and YAML
 
-<br>
-<br>
-
-<h3 align='center'>Demo</h3>
-
-<div align="center">
-
-[![i18n-ally on VS code demo](https://img.youtube.com/vi/kowM-MoGVns/0.jpg)](https://youtu.be/kowM-MoGVns)
-
-</div>
-
-<br>
-<br>
-
-<h3 align='center'>Inline Annotations</h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-animated.gif?raw=true)
-
-<h3 align='center'>Hover and Direct Actions</h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/hover.png?raw=true)
-
-<h3 align='center'>Manage All Translations in One Place</h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-sidebar.png?raw=true)
-
-<h3 align='center'><a href='https://github.com/lokalise/i18n-ally/wiki/Editor-UI'>Editor UI</a> & <a href='https://github.com/lokalise/i18n-ally/wiki/Review-&-Collaboration-System'>Review System</a></h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-editor.png?raw=true)
-
-<h3 align='center'>Extract Translations from Code</h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/extract.png?raw=true)
-
-<h3 align='center'>Report Missing Translations</h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/problems.png?raw=true)
-
-<h3 align='center'>Machine Translation</h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/quick-actions.png?raw=true)
-
-<h3 align='center'>Annotations for JSON and YAML</h3>
-
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-locale.png?raw=true)
-
-<h3 align="center">General Features</h3>
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-locale.png?raw=true)### General Features
 
 - Supports multi-root workspaces
 - Supports remote development
@@ -110,30 +26,29 @@ As a collaborative productivity platform, it helps structure and automate the tr
 - Supports [linked locale messages](https://kazupon.github.io/vue-i18n/guide/messages.html#linked-locale-messages)
 - Uses i18n for the extension itself, of course. [Translation List](https://github.com/lokalise/i18n-ally#-multilingual-support)
 
-
 ## 🌍 Multilingual Support
 
 This extension itself supports i18n as well. It will be auto-matched to the display language you use in your VS Code editor. We currently support the following languages.
 
 | Language | Maintainer | Contributors |
 | --- | --- | --- |
-| English    | [@antfu](https://github.com/antfu)          | [@rubjo](https://github.com/rubjo), [@EdRands](https://github.com/EdRands) |
-| Simplified Chinese (简体中文)  | [@antfu](https://github.com/antfu)           |       |
-| Traditional Chinese (繁體中文)  | [@antfu](https://github.com/antfu)           |       |
-| Norwegian (Norsk)  |  | [@rubjo](https://github.com/rubjo)       |
+| English | [@antfu](https://github.com/antfu) | [@rubjo](https://github.com/rubjo), [@EdRands](https://github.com/EdRands) |
+| Simplified Chinese (简体中文) | [@antfu](https://github.com/antfu) |  |
+| Traditional Chinese (繁體中文) | [@antfu](https://github.com/antfu) |  |
+| Norwegian (Norsk) |  | [@rubjo](https://github.com/rubjo) |
 | Spanish (Español) |  | [@Baltimer](https://github.com/Baltimer) |
 | Japanese (日本語) |  | [@isdh](https://github.com/isdh) |
 | Dutch (Nederlands) |  | [@Niekvdm](https://github.com/Niekvdm), [@Excalibaard](https://github.com/Excalibaard) |
-| Portuguese (Brazilian)  |  | [@Ibcs16](https://github.com/Ibcs16) |
+| Portuguese (Brazilian) |  | [@Ibcs16](https://github.com/Ibcs16) |
 | French (Français) |  | [@Nicoxx45](https://github.com/Nicoxx45), [@eri](https://github.com/eri), [@Frank](https://github.com/FrankSAURET) |
 | Swedish (Svenska) | [@vladdeSV](https://github.com/vladdeSV) |  |
 | Ukrainian (Українська) |  | [@uhodav](https://github.com/uhodav) |
 | Russian (Русский) |  | [@uhodav](https://github.com/uhodav) |
-| German (Deutsch) | [@alexanderniebuhr](https://github.com/alexanderniebuhr) | |
+| German (Deutsch) | [@alexanderniebuhr](https://github.com/alexanderniebuhr) |  |
 | Thai (ภาษาไทย) | [@watchakorn-18k](https://github.com/watchakorn-18k) |  |
 | Turkish (Türkçe) |  | [@eri](https://github.com/eri), [@dilekerkut](https://github.com/dilekerkut) |
 | Korean (한국어) |  | [@moka-ayumu](https://github.com/moka-ayumu) |
-| Hungarian (Magyar)  | [@Cs4K1Sr4C](https://github.com/Cs4K1Sr4C)  | [@Cs4K1Sr4C](https://github.com/Cs4K1Sr4C)  |
+| Hungarian (Magyar) | [@Cs4K1Sr4C](https://github.com/Cs4K1Sr4C) | [@Cs4K1Sr4C](https://github.com/Cs4K1Sr4C) |
 
 [**Help Translate**](https://github.com/lokalise/i18n-ally/wiki/Contribute#working-on-translations)
 
@@ -145,12 +60,48 @@ This extension was inspired by [think2011/vscode-vue-i18n](https://github.com/th
 
 Support for Vue Single File Component (SFC) is powered by [kazupon/vue-i18n-locale-message](https://github.com/kazupon/vue-i18n-locale-message), which is created by the author of vue-i18n. Thanks for making this!
 
-
 ### Code Contributors
 
 My great thanks to all the awesome contributors:
 
-<a href="https://github.com/lokalise/i18n-ally/graphs/contributors"><img src="https://contrib.rocks/image?repo=lokalise/i18n-ally" /></a>
+## VSC扩展包
+
+### Install
+
+先使用yarn安装依赖
+
+```
+yarn
+```
+
+以下安装是针对VS code扩展开发需要用到的，在安装依赖时已经包含了，这里可以不执行
+
+```
+```shell
+# start
+npm install -g yo generator-code
+
+# VSCE
+npm install -g @vscode/vsce
+```
+
+### Package
+
+使用以下命令可以生成`.visx`后缀的安装包，可以在vscode的扩展栏选择`Install from VSIX...`
+
+```
+# myExtension.vsix generated
+vsce package
+```
+
+### Publishing
+
+发布到VS Code的Marketplace上，这里需要填一个publisher ID，没有的话要到 m[arketplace.visualstudio.com](http://marketplace.visualstudio.com) 注册一个。
+
+```
+# <publisher id>.myExtension published to VS Code Marketplace
+vsce publish
+```
 
 ## 📄 License
 
