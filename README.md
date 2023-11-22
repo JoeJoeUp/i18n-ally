@@ -1,24 +1,22 @@
-![](https://github.com/lokalise/i18n-ally/raw/main/screenshots/full-logo-new.png?raw=true)
-
-## Features
+![](https://github.com/lokalise/i18n-ally/raw/main/screenshots/full-logo-new.png?raw=true)## Features
 
 ### Inline Annotations
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-animated.gif?raw=true)### Hover and Direct Actions
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-animated.gif?raw=true)\### Hover and Direct Actions
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/hover.png?raw=true)### Manage All Translations in One Place
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/hover.png?raw=true)\### Manage All Translations in One Place
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-sidebar.png?raw=true)### [Editor UI](https://github.com/lokalise/i18n-ally/wiki/Editor-UI) & [Review System](https://github.com/lokalise/i18n-ally/wiki/Review-&-Collaboration-System)
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-sidebar.png?raw=true)\### [Editor UI](https://github.com/lokalise/i18n-ally/wiki/Editor-UI) & [Review System](https://github.com/lokalise/i18n-ally/wiki/Review-&-Collaboration-System)
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-editor.png?raw=true)### Extract Translations from Code
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/review-editor.png?raw=true)\### Extract Translations from Code
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/extract.png?raw=true)### Report Missing Translations
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/extract.png?raw=true)\### Report Missing Translations
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/problems.png?raw=true)### Machine Translation
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/problems.png?raw=true)\### Machine Translation
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/quick-actions.png?raw=true)### Annotations for JSON and YAML
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/quick-actions.png?raw=true)\### Annotations for JSON and YAML
 
-![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-locale.png?raw=true)### General Features
+![](https://github.com/lokalise/i18n-ally/blob/screenshots/annotation-locale.png?raw=true)\### General Features
 
 - Supports multi-root workspaces
 - Supports remote development
@@ -83,6 +81,12 @@ npm install -g yo generator-code
 
 # VSCE
 npm install -g @vscode/vsce
+```
+
+### Build
+
+```
+yarn main:build
 ```
 
 ### Package
