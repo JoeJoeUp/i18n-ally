@@ -8,6 +8,7 @@ import { DetectionResult } from '~/core/types'
 const defaultOptions: Required<ExtractionHTMLOptions> = {
   attributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
   ignoredTags: ['script', 'style'],
+  ignoredTagsByAttr: [],
   vBind: true,
   inlineText: true,
 }
@@ -22,6 +23,7 @@ export function detect(
   const {
     attributes: ATTRS,
     ignoredTags: IGNORED_TAGS,
+    ignoredTagsByAttr: IGNORED_TAGS_BY_ATTR,
     vBind: V_BIND,
   } = Object.assign({}, defaultOptions, userOptions)
 
@@ -63,6 +65,9 @@ export function detect(
       const code = input.slice(tagStart, tagEnd)
 
       for (const [name, isDynamic] of attrNames) {
+        if (IGNORED_TAGS_BY_ATTR.includes(name))
+          return
+
         const match = code.match(
           new RegExp(`\\s${name}=(["'])([^\\1]*?)\\1`, 'm'),
         )

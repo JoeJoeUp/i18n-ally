@@ -3,8 +3,9 @@ import fs from 'fs'
 import { workspace, FileSystemWatcher, TextDocument } from 'vscode'
 import YAML from 'js-yaml'
 import { Framework, ScopeRange } from './base'
-import { Global } from '~/core'
+import { Config, Global } from '~/core'
 import { LanguageId, File, Log } from '~/utils'
+import { DefaultDynamicExtractionsRules, DefaultExtractionRules, extractionsParsers } from '~/extraction'
 
 const CustomFrameworkConfigFilename = './.vscode/i18n-ally-custom-framework.yml'
 
@@ -112,6 +113,24 @@ class CustomFramework extends Framework {
     }
 
     return ranges
+  }
+
+  detectHardStrings(doc: TextDocument) {
+    const text = doc.getText()
+
+    return extractionsParsers.html.detect(
+      text,
+      DefaultExtractionRules,
+      DefaultDynamicExtractionsRules,
+      Config.extractParserHTMLOptions,
+      // <script>
+      script => extractionsParsers.babel.detect(
+        script,
+        DefaultExtractionRules,
+        DefaultDynamicExtractionsRules,
+        Config.extractParserBabelOptions,
+      ),
+    )
   }
 
   startWatch(root?: string) {
