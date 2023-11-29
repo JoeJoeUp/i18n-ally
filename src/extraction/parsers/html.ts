@@ -8,7 +8,7 @@ import { DetectionResult } from '~/core/types'
 const defaultOptions: Required<ExtractionHTMLOptions> = {
   attributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
   ignoredTags: ['script', 'style'],
-  ignoredTagsByAttr: [],
+  ignoredTextByAttr: [],
   vBind: true,
   inlineText: true,
 }
@@ -23,7 +23,7 @@ export function detect(
   const {
     attributes: ATTRS,
     ignoredTags: IGNORED_TAGS,
-    ignoredTagsByAttr: IGNORED_TAGS_BY_ATTR,
+    ignoredTextByAttr: IGNORED_TEXT_BY_ATTR,
     vBind: V_BIND,
   } = Object.assign({}, defaultOptions, userOptions)
 
@@ -32,6 +32,7 @@ export function detect(
   // replace svelte inline function, #624
   input = input.replace(/<(.*?)={(.*?)}(.*?)>/g, '<$1="$2"$3>')
 
+  let ignoreCurrentText = false
   let lastTag = ''
   let lastScriptIndex: number | null = null
   const parser = new Parser({
@@ -44,6 +45,9 @@ export function detect(
         return
 
       const attrNames = Object.keys(attrs).map((name) => {
+        if (!ignoreCurrentText && IGNORED_TEXT_BY_ATTR.includes(name))
+          ignoreCurrentText = true
+
         // static
         if (ATTRS.includes(name) && shouldExtract(attrs[name], rules))
           return [name, false]
@@ -65,9 +69,6 @@ export function detect(
       const code = input.slice(tagStart, tagEnd)
 
       for (const [name, isDynamic] of attrNames) {
-        if (IGNORED_TAGS_BY_ATTR.includes(name))
-          return
-
         const match = code.match(
           new RegExp(`\\s${name}=(["'])([^\\1]*?)\\1`, 'm'),
         )
@@ -107,6 +108,10 @@ export function detect(
         return
       if (IGNORED_TAGS.includes(lastTag))
         return
+      if (ignoreCurrentText) {
+        ignoreCurrentText = false
+        return
+      }
 
       const start = parser.startIndex
       const end = parser.endIndex! + 1

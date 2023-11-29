@@ -15,6 +15,7 @@ interface CustomFrameworkConfig {
   scopeRangeRegex?: string
   refactorTemplates?: string[]
   monopoly?: boolean
+  // supportAutoExtraction?: LanguageId[] | LanguageId
 
   keyMatchReg?: string[] | string // deprecated. use "usageMatchRegex" instead
 }
@@ -71,6 +72,11 @@ class CustomFramework extends Framework {
     return id
   }
 
+  supportAutoExtraction = [
+    'html',
+    'java',
+  ]
+
   // @ts-expect-error
   get monopoly() {
     return this.data?.monopoly || false
@@ -116,21 +122,38 @@ class CustomFramework extends Framework {
   }
 
   detectHardStrings(doc: TextDocument) {
+    const lang = doc.languageId
     const text = doc.getText()
 
-    return extractionsParsers.html.detect(
-      text,
-      DefaultExtractionRules,
-      DefaultDynamicExtractionsRules,
-      Config.extractParserHTMLOptions,
-      // <script>
-      script => extractionsParsers.babel.detect(
-        script,
+    if (lang === 'html') {
+      return extractionsParsers.html.detect(
+        text,
         DefaultExtractionRules,
         DefaultDynamicExtractionsRules,
-        Config.extractParserBabelOptions,
-      ),
-    )
+        Config.extractParserHTMLOptions,
+        // <script>
+        script => extractionsParsers.babel.detect(
+          script,
+          DefaultExtractionRules,
+          DefaultDynamicExtractionsRules,
+          Config.extractParserBabelOptions,
+          // (path, recordIgnore) => {
+          //   // eslint-disable-next-line no-console
+          //   // console.log('path:', path.toString())
+          //   // const callee = path.get('callee')
+          //   // if (callee.node.name === 't' || callee.node.name === 'scopedT')
+          //   recordIgnore(path)
+          // },
+        ),
+      )
+    }
+    else {
+      return extractionsParsers.babel.detect(
+        text,
+        DefaultExtractionRules,
+        DefaultDynamicExtractionsRules,
+      )
+    }
   }
 
   startWatch(root?: string) {

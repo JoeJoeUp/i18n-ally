@@ -8,6 +8,7 @@ import { DetectionResult } from '~/core/types'
 
 const defaultOptions: Required<ExtractionBabelOptions> = {
   ignoredJSXAttributes: ['class', 'className', 'key', 'style', 'ref', 'onClick'],
+  replaceRegex: [],
 }
 
 export function detect(
@@ -19,9 +20,12 @@ export function detect(
 ) {
   const {
     ignoredJSXAttributes,
+    replaceRegex,
   } = Object.assign({}, defaultOptions, userOptions)
 
   const detections: DetectionResult[] = []
+
+  input = input.replace(new RegExp(replaceRegex[0], 'gm'), 'undefined')
 
   const ast = parse(input, {
     sourceType: 'unambiguous',

@@ -18,7 +18,7 @@ export interface ExtractionHTMLOptions {
    * ['th:text', 'th:utext']
    * @default []
    */
-  ignoredTagsByAttr?: string[]
+  ignoredTextByAttr?: string[]
 
   /**
    * Extract Vue v-bind syntax
@@ -42,4 +42,9 @@ export interface ExtractionBabelOptions {
    * @default ['class', 'className', 'key', 'style', 'ref', 'onClick']
    */
   ignoredJSXAttributes?: string[]
+
+  /**
+   * Replace some special syntax to pass AST check
+   */
+  replaceRegex?: string[]
 }
