@@ -48,3 +48,10 @@ export interface ExtractionBabelOptions {
    */
   replaceRegex?: string[]
 }
+
+export interface ExtractionJavaOptions {
+  /**
+   * Replace some special syntax to pass AST check
+   */
+  replaceRegex?: string[]
+}

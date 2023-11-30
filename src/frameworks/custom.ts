@@ -82,7 +82,7 @@ class CustomFramework extends Framework {
     return this.data?.monopoly || false
   }
 
-  set monopoly(_) {}
+  set monopoly(_) { }
 
   refactorTemplates(keypath: string) {
     return (this.data?.refactorTemplates || ['$1'])
@@ -125,7 +125,13 @@ class CustomFramework extends Framework {
     const lang = doc.languageId
     const text = doc.getText()
 
-    if (lang === 'html') {
+    if (lang === 'java') {
+      return extractionsParsers.java.detect(
+        text,
+        Config.extractParserJavaOptions,
+      )
+    }
+    else {
       return extractionsParsers.html.detect(
         text,
         DefaultExtractionRules,
@@ -145,13 +151,6 @@ class CustomFramework extends Framework {
           //   recordIgnore(path)
           // },
         ),
-      )
-    }
-    else {
-      return extractionsParsers.babel.detect(
-        text,
-        DefaultExtractionRules,
-        DefaultDynamicExtractionsRules,
       )
     }
   }

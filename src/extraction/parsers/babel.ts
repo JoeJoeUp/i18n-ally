@@ -25,7 +25,9 @@ export function detect(
 
   const detections: DetectionResult[] = []
 
-  input = input.replace(new RegExp(replaceRegex[0], 'gm'), 'undefined')
+  // TODO: Currently only deals with the first Regex in the replaceRegex array
+  if (replaceRegex.length > 0)
+    input = input.replace(new RegExp(replaceRegex[0], 'gm'), 'undefined')
 
   const ast = parse(input, {
     sourceType: 'unambiguous',

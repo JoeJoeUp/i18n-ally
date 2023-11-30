@@ -7,7 +7,7 @@ import { EXT_NAMESPACE, EXT_ID, EXT_LEGACY_NAMESPACE, KEY_REG_DEFAULT, KEY_REG_A
 import { KeyStyle, DirStructureAuto, SortCompare, TargetPickingStrategy } from '.'
 import i18n from '~/i18n'
 import { CaseStyles } from '~/utils/changeCase'
-import { ExtractionBabelOptions, ExtractionHTMLOptions } from '~/extraction/parsers/options'
+import { ExtractionBabelOptions, ExtractionHTMLOptions, ExtractionJavaOptions } from '~/extraction/parsers/options'
 import { resolveRefactorTemplate } from '~/utils/resolveRefactorTemplate'
 
 export class Config {
@@ -474,6 +474,10 @@ export class Config {
 
   static get extractParserBabelOptions() {
     return this.getConfig<ExtractionBabelOptions>('extract.parsers.babel') ?? {}
+  }
+
+  static get extractParserJavaOptions() {
+    return this.getConfig<ExtractionJavaOptions>('extract.parsers.java') ?? {}
   }
 
   static get extractIgnored() {
